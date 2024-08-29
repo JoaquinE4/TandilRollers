@@ -37,7 +37,7 @@ export default function Contacto() {
         
           
           {/* WhatsApp */}
-            <Link to={"wa.link/7fhh92"}>
+            <Link to={"https://wa.link/7fhh92"}>
           <div className="flex items-center bg-white min-w-[15.5rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
             <FaWhatsapp size={30} />
             <span className="font-medium">Contactate en WhatsApp</span>
