@@ -18,7 +18,7 @@ export default function Contacto() {
           
           {/* Facebook */}
            <Link to={"https://www.facebook.com/tandil.roller"}>
-          <div className="flex items-center bg-white min-w-[16.2rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
+          <div className="flex items-center bg-white min-w-[260px] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
            <FaFacebookF size={30} />
            
             <span className="font-medium">Síguenos en Facebook</span>
@@ -27,7 +27,7 @@ export default function Contacto() {
 
           {/* Instagram */}
            <Link to={"https://www.instagram.com/tandil_roller/"}>
-          <div className="flex items-center bg-white min-w-[16.2rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
+          <div className="flex items-center bg-white min-w-[260px] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
            
             <FaInstagram size={30} />
             <span className="font-medium">Síguenos en Instagram</span>
@@ -38,7 +38,7 @@ export default function Contacto() {
           
           {/* WhatsApp */}
             <Link to={"https://wa.link/7fhh92"}>
-          <div className="flex items-center bg-white min-w-[15.5rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
+          <div className="flex items-center bg-white min-w-[16.2rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
             <FaWhatsapp size={30} />
             <span className="font-medium">Contactate en WhatsApp</span>
           </div>
