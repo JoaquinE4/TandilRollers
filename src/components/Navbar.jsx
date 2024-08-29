@@ -1,16 +1,27 @@
 import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import rollImg from "../assets/roller-img.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [bgColor, setBgColor] = useState('bg-white');
+
+  // Maneja el scroll y el cambio de color de fondo
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 0);
+    if (window.scrollY > 50) {
+      setBgColor('bg-slate-50'); // Cambia al color deseado
+    } else {
+      setBgColor('bg-[#fff0]'); // Color original
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll(); // Establece el color de fondo inicial al montar el componente
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
@@ -20,11 +31,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`w-full  fixed md:relative top-0 z-20 bg-slate-300 transition-shadow duration-300 ${scrolled ? 'shadow-md' : ''}`}>
+    <nav className={`h-[5rem] ${bgColor} w-full md:h-[76px] mb-2 fixed md:relative top-0 z-20  transition-shadow duration-300 ${scrolled ? 'shadow-md' : ''}`}>
       <div className="container mx-auto flex items-center justify-between h-full px-5 sm:px-10 py-4">
         {/* Logo */}
         <a href="/" className="flex items-center text-2xl sm:text-3xl font-bold text-white hover:text-[#d8d5f5] transition-colors duration-300" aria-label="Inicio">
-          <img src={rollImg} alt="Logo" className="h-12 sm:h-14" />
+          <img src={rollImg} alt="Logo" className="h-14 sm:h-14" />
         </a>
 
         {/* Navegación de escritorio */}

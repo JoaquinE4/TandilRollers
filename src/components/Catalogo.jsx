@@ -33,7 +33,7 @@ const Catalogo = () => {
   ];
 
   return (
-    <section  className="h-full pb-12 flex flex-col mb-12 items-center bg-slate-50 rounded-sm  w-full   ">
+    <section  className="h-full pb-12 flex flex-col mb-12 items-center bg-slate  rounded-sm  w-full   ">
       <h3 id="catalogo" className=" py-10 px-4 text-gray-600   text-sm sm:text-lg  font-normal">Catálogo de telas</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-14   min-w-80  h-full">
         {items.map((item, index) => (
@@ -45,7 +45,7 @@ const Catalogo = () => {
               <img
                 src={item.imgSrc}
                 alt={item.altText}
-                className="  h-[7rem] w-[7rem] md:w-[18rem] md:h-[18rem] sm:h-[10rem] sm:w-[10rem] bg-slate-800     transition-transform duration-300 ease-in-out transform hover:scale-110"
+                className="  h-[9rem] w-[9rem] md:w-[18rem] md:h-[18rem] sm:h-[10rem] sm:w-[10rem] bg-slate-800     transition-transform duration-300 ease-in-out transform hover:scale-110"
               />
             </div>
             <div className="flex justify-start w-9/12">

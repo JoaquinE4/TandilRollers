@@ -12,21 +12,21 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="mt-20 py-4 flex flex-col items-center md:py-7 sm:px-8 w-full">
+      <main className="    flex flex-col items-center    w-full">
         <Hero />
         <Servicios />
 
-        <section className="w-full flex flex-col items-center py-10 bg-slate-50">
-          <div className="text-center py-8">
+        <section className="w-full flex flex-col items-center py-10 bg-slate-">
+          <div className="text-center px-3 flex flex-col gap-5 py-8">
             <h2 className='text-3xl font-semibold text-gray-700'>Productos</h2>
-            <p  className='text-gray-600 text-sm mt-2'>Explora nuestra variedad de cortinas roller y encuentra la perfecta para vos.</p>
+            <p  className='text-gray-600 text-md md:text-lg mt-2'>Explora nuestra variedad de cortinas roller y encuentra la perfecta para vos.</p>
           </div>
           <Catalogo />
           <CatalogoSistemas />
         </section>
 
-        <Contacto />
         <Dato />
+        <Contacto />
       </main>
       <Footer />
     </>

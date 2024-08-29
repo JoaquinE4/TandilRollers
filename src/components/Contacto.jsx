@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 export default function Contacto() {
   return (
-    <section id="contacto" className="bg-slate-50 py-12 w-full">
+    <section id="contacto" className="bg-slate-200 mb-28 py-12 w-full">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-gray-700 mb-4">Contáctanos</h2>
-          <p className="text-gray-600 text-sm md:text-base">
+          <p className="text-gray-600 text-lg md:text-base">
             Para cualquier consulta o encargo de presupuesto, no dudes en contactarnos a través de los siguientes medios:
           </p>
         </div>
@@ -18,7 +18,7 @@ export default function Contacto() {
           
           {/* Facebook */}
            <Link to={"https://www.facebook.com/tandil.roller"}>
-          <div className="flex items-center bg-white text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
+          <div className="flex items-center bg-white min-w-[16.2rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
            <FaFacebookF size={30} />
            
             <span className="font-medium">Síguenos en Facebook</span>
@@ -27,7 +27,7 @@ export default function Contacto() {
 
           {/* Instagram */}
            <Link to={"https://www.instagram.com/tandil_roller/"}>
-          <div className="flex items-center bg-white text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
+          <div className="flex items-center bg-white min-w-[16.2rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
            
             <FaInstagram size={30} />
             <span className="font-medium">Síguenos en Instagram</span>
@@ -38,9 +38,9 @@ export default function Contacto() {
           
           {/* WhatsApp */}
             <Link to={"wa.link/7fhh92"}>
-          <div className="flex items-center bg-white text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
+          <div className="flex items-center bg-white min-w-[15.5rem] text-gray-700 p-4 rounded-lg shadow-md space-x-4 w-full max-w-xs">
             <FaWhatsapp size={30} />
-            <span className="font-medium">Chatea con nosotros en WhatsApp</span>
+            <span className="font-medium">Contactate en WhatsApp</span>
           </div>
             </Link>
           

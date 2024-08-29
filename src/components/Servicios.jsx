@@ -4,11 +4,11 @@ import { PiMapPinLineLight } from 'react-icons/pi';
 export default function Servicios() {
   return (
     <>
-      <section className="bg-slate-50  py-12 w-full">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+      <section className="bg-slate-100 flex items-center  py-12 md:h-[450px] w-full">
+        <div className="container mx-auto   px-6">
+          <div className="text-center md:h-[100px] flex flex-col gap-6 mb-12">
             <h2 className="text-3xl font-semibold text-gray-700">Nuestros Servicios</h2>
-            <p className="text-gray-600 text-sm mt-2">
+            <p className="text-gray-600 text-sm md:text-lg mt-2">
               Ofrecemos una gama completa de servicios para satisfacer todas tus necesidades de cortinas roller.
             </p>
           </div>
