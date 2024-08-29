@@ -33,8 +33,8 @@ const Catalogo = () => {
   ];
 
   return (
-    <div className="h-full pb-12 flex flex-col mb-12 items-center bg-slate-50 rounded-sm  w-full   ">
-      <h3 className=" py-10 px-4 text-gray-600   text-sm sm:text-lg  font-normal">Catálogo de telas</h3>
+    <section  className="h-full pb-12 flex flex-col mb-12 items-center bg-slate-50 rounded-sm  w-full   ">
+      <h3 id="catalogo" className=" py-10 px-4 text-gray-600   text-sm sm:text-lg  font-normal">Catálogo de telas</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-14   min-w-80  h-full">
         {items.map((item, index) => (
           <div
@@ -54,7 +54,7 @@ const Catalogo = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

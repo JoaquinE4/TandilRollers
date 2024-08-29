@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tandil Rollers - Cortinas Roller</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-teal-dark: #004d77;
+      --primary-teal-light: #00bfae;
+      --secondary-gray-dark: #333333;
+      --secondary-gray-light: #f9f9f9;
+      --accent-white: #ffffff;
+      --accent-gray-medium: #cccccc;
+      --accent-blue-light: #d8d5f5;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--secondary-gray-dark);
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      background-color: var(--secondary-gray-light);
+      box-shadow: 0 4px 8px rgba(204, 204, 204, 0.5);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar img {
+      height: 3rem;
+    }
+
+    .navbar ul {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .navbar a {
+      color: var(--secondary-gray-dark);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: var(--accent-blue-light);
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background-image: url('path/to/your/image.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--accent-white);
+      padding: 1rem;
+      overflow: hidden;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero .cta-button {
+      background-color: var(--primary-teal-light);
+      color: var(--accent-white);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .hero .cta-button:hover {
+      background-color: var(--primary-teal-dark);
+    }
+
+    /* Servicios Section */
+    .services {
+      background-color: var(--secondary-gray-light);
+      padding: 2rem 1rem;
+    }
+
+    .services h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .services .service-card {
+      background-color: var(--accent-white);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(204, 204, 204, 0.5);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .services .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .services .service-card p {
+      font-size: 1rem;
+    }
+
+    /* Catalogo Section */
+    .catalogo {
+      padding: 2rem 1rem;
+    }
+
+    .catalogo h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .catalogo .catalogo-item {
+      background-color: var(--accent-white);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(204, 204, 204, 0.5);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .catalogo .catalogo-item img {
+      max-width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .catalogo .catalogo-item:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: var(--primary-teal-light);
+      color: var(--accent-white);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact p {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact .cta-button {
+      background-color: var(--accent-white);
+      color: var(--primary-teal-light);
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .contact .cta-button:hover {
+      background-color: var(--accent-gray-medium);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar ul {
+        display: none;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .catalogo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="/">
+      <img src="path/to/logo.png" alt="Tandil Rollers Logo">
+    </a>
+    <ul>
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <div class="menu-icon">
+      <span>Menu</span> <!-- Puedes agregar un icono aquí si lo deseas -->
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Fabricamos Cortinas Roller</h2>
+      <p>Estilo y ajuste perfecto para cualquier espacio</p>
+      <a href="#contact" class="cta-button">Contáctanos</a>
+    </div>
+  </div>
+
+  <!-- Servicios Section -->
+  <section id="services" class="services">
+    <div class="container mx-auto">
+      <h2>Nuestros Servicios</h2>
+      <div class="service-card">
+        <h3>Fabricación Personalizada</h3>
+        <p>Creamos cortinas roller a medida según tus especificaciones y preferencias.</p>
+      </div>
+      <div class="service-card">
+        <h3>Instalación Profesional</h3>
+        <p>Instalamos tus cortinas roller con precisión y cuidado para garantizar un ajuste perfecto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalogo Section -->
+  <section id="catalogo" class="catalogo">
+    <h3>Catálogo de Telas</h3>
+    <div class="catalogo-item">
+      <img src="https://sanisidrolonasar.vtexassets.com/arquivos/ids/161371-500-auto?v=637668841985170000&width=500&height=auto&aspect=true" alt="Black out">
+      <p>Black out</p>
+    </div>
+    <div class="catalogo-item">
+      <img src="https://sanisidrolonasar.vtexassets.com/arquivos/ids/159119-500-auto?v=637648988110830000&width=500&height=auto&aspect=true" alt="Pampa">
+      <p>Pampa</p>
+    </div>
+    <div class="catalogo-item">
+      <img src="https://sanisidrolonasar.vtexassets.com/arquivos/ids/162147-500-auto?v=637907269717700000&width=500&height=auto&aspect=true" alt="Poliester">
+      <p>Poliester</p>
+    </div>
+    <div class="catalogo-item">
+      <img src="https://sanisidrolonasar.vtexassets.com/arquivos/ids/159119-500-auto?v=637648988110830000&width=500&height=auto&aspect=true" alt="Sun screen">
+      <p>Sun screen</p>
+    </div>
+    <div class="catalogo-item">
+      <img src="https://sanisidrolonasar.vtexassets.com/arquivos/ids/162147-500-auto?v=637907269717700000&width=500&height=auto&aspect=true" alt="Rustico">
+      <p>Rustico</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>¿Interesado en Nuestros Productos?</h2>
+    <p>Contáctanos para obtener más información o solicitar una cotización.</p>
+    <a href="mailto:info@tandilrollers.com" class="cta-button">Envíanos un Email</a>
+  </section>
+
+</body>
+</html>

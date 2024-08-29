@@ -4,7 +4,7 @@ import { PiMapPinLineLight } from 'react-icons/pi';
 export default function Servicios() {
   return (
     <>
-      <section className="bg-slate-50 py-12 w-full">
+      <section className="bg-slate-50  py-12 w-full">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-gray-700">Nuestros Servicios</h2>
